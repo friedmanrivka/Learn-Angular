@@ -1,4 +1,7 @@
 <h1>{{title}}</h1>
 <h1>Rivky Friedman</h1>
 <h3>I learn Angular</h3>
-<app-subject-lists></app-subject-lists>
+<button (click)="setTypeShow(1)">הצג נושאים</button>
+<button (click)="setTypeShow(2)">הצג תכונות</button>
+<app-subject-lists *ngIf="typeShow==1"></app-subject-lists>
+<app-uses-list *ngIf="typeShow==2"></app-uses-list>
